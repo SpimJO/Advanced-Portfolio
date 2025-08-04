@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from 'react';
-import "./index.css";
+import './styles/tailwind.output.css';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import AnimatedBackground from "./components/Background";
