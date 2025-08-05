@@ -112,10 +112,12 @@ const techStacks = [
   { icon: "vite.svg", language: "Vite" },
   { icon: "nodejs.svg", language: "Node JS" },
   { icon: "bootstrap.svg", language: "Bootstrap" },
-  { icon: "firebase.svg", language: "Firebase" },
-  { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vercel.svg", language: "Vercel" },
-  { icon: "SweetAlert.svg", language: "SweetAlert2" },
+  { icon: "laravel.svg", language: "Laravel" },
+  { icon: "python.svg", language: "Python" },
+  { icon: "fastapi.svg", language: "FastAPI" },
+  { icon: "flask.svg", language: "Flask" },
+  { icon: "postgresql.svg", language: "PostgreSQL" },
+  { icon: "sql.svg", language: "SQL" },
 ];
 
 export default function FullWidthTabs() {
@@ -174,7 +176,7 @@ export default function FullWidthTabs() {
         setCertificates(JSON.parse(cachedCertificates));
     }
     
-    fetchData(); // Tetap panggil fetchData untuk sinkronisasi data terbaru
+    fetchData(); 
   }, [fetchData]);
 
   const handleChange = (event, newValue) => {
@@ -192,14 +194,14 @@ export default function FullWidthTabs() {
   const displayedProjects = showAllProjects ? projects : projects.slice(0, initialItems);
   const displayedCertificates = showAllCertificates ? certificates : certificates.slice(0, initialItems);
 
-  // Sisa dari komponen (return statement) tidak ada perubahan
+  
   return (
     <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden" id="Portofolio">
       {/* Header section - unchanged */}
       <div className="text-center pb-10" data-aos="fade-up" data-aos-duration="1000">
         <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
           <span style={{
-            color: '#6366f1',
+            color: '#4e4f7cff',
             backgroundImage: 'linear-gradient(45deg, #6366f1 10%, #a855f7 93%)',
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
@@ -209,8 +211,8 @@ export default function FullWidthTabs() {
           </span>
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
-          Explore my journey through projects, certifications, and technical expertise. 
-          Each section represents a milestone in my continuous learning path.
+          Check my journey through real-world projects, certifications, and growing technical skills.
+          Each section marks a step forward in my passion for learning and development.
         </p>
       </div>
 
