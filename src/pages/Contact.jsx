@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Share2, User, Mail, MessageSquare, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks";
-import Komentar from "../components/Commentar";
+import Commentar from "../components/Commentar";
 import Swal from "sweetalert2";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -44,10 +44,9 @@ const ContactPage = () => {
     });
 
     try {
-      // Ganti dengan email Anda di FormSubmit
-      const formSubmitUrl = 'https://formsubmit.co/ekizulfarrachman@gmail.com';
+     
+      const formSubmitUrl = "https://formspree.io/f/mldnyawo";
       
-      // Siapkan data form untuk FormSubmit
       const submitData = new FormData();
       submitData.append('name', formData.name);
       submitData.append('email', formData.email);
@@ -125,7 +124,7 @@ const ContactPage = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Hubungi Saya
+            Contact Me
           </span>
         </h2>
         <p
@@ -133,7 +132,7 @@ const ContactPage = () => {
           data-aos-duration="1100"
           className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
         >
-          Punya pertanyaan? Kirimi saya pesan, dan saya akan segera membalasnya.
+          If you have any questions, feel free to send me a message. I’ll get back to you as soon as possible.
         </p>
       </div>
 
@@ -149,10 +148,10 @@ const ContactPage = () => {
             <div className="flex justify-between items-start mb-8">
               <div>
                 <h2 className="text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
-                  Hubungi
+                  Contact
                 </h2>
                 <p className="text-gray-400">
-                  Ada yang ingin didiskusikan? Kirim saya pesan dan mari kita bicara.
+                  Send me a message and let's talk.
                 </p>
               </div>
               <Share2 className="w-10 h-10 text-[#6366f1] opacity-50" />
@@ -171,7 +170,7 @@ const ContactPage = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Nama Anda"
+                  placeholder="Name"
                   value={formData.name}
                   onChange={handleChange}
                   disabled={isSubmitting}
@@ -188,7 +187,7 @@ const ContactPage = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email Anda"
+                  placeholder="Email Address"
                   value={formData.email}
                   onChange={handleChange}
                   disabled={isSubmitting}
@@ -204,7 +203,7 @@ const ContactPage = () => {
                 <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
                 <textarea
                   name="message"
-                  placeholder="Pesan Anda"
+                  placeholder="Your Message"
                   value={formData.message}
                   onChange={handleChange}
                   disabled={isSubmitting}
@@ -220,7 +219,7 @@ const ContactPage = () => {
                 className="w-full bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <Send className="w-5 h-5" />
-                {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
 
@@ -230,7 +229,7 @@ const ContactPage = () => {
           </div>
 
           <div className="  bg-white/5 backdrop-blur-xl rounded-3xl p-3 py-3 md:p-10 md:py-8 shadow-2xl transform transition-all duration-500 hover:shadow-[#6366f1]/10">
-            <Komentar />
+            <Commentar />
           </div>
         </div>
       </div>
