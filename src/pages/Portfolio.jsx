@@ -139,7 +139,6 @@ export default function FullWidthTabs() {
 
   const fetchData = useCallback(async () => {
     try {
-      // Mengambil data dari Supabase secara paralel
       const [projectsResponse, certificatesResponse] = await Promise.all([
         supabase.from("projects").select("*").order('id', { ascending: true }),
         supabase.from("certificates").select("*").order('id', { ascending: true }), 
@@ -152,11 +151,12 @@ export default function FullWidthTabs() {
       // Supabase mengembalikan data dalam properti 'data'
       const projectData = projectsResponse.data || [];
       const certificateData = certificatesResponse.data || [];
+      
+      console.log("✅ Supabase Certificates Data:", certificateData);
 
       setProjects(projectData);
       setCertificates(certificateData);
 
-      // Store in localStorage (fungsionalitas ini tetap dipertahankan)
       localStorage.setItem("projects", JSON.stringify(projectData));
       localStorage.setItem("certificates", JSON.stringify(certificateData));
     } catch (error) {
@@ -167,7 +167,6 @@ export default function FullWidthTabs() {
 
 
   useEffect(() => {
-    // Coba ambil dari localStorage dulu untuk laod lebih cepat
     const cachedProjects = localStorage.getItem('projects');
     const cachedCertificates = localStorage.getItem('certificates');
 
