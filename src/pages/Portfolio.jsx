@@ -118,6 +118,7 @@ const techStacks = [
   { icon: "flask.svg", language: "Flask" },
   { icon: "postgresql.svg", language: "PostgreSQL" },
   { icon: "sql.svg", language: "SQL" },
+  { icon: "sass.svg", language: "SASS" },
 ];
 
 export default function FullWidthTabs() {
