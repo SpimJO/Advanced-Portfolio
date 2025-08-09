@@ -225,7 +225,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
     );
 });
 
-const Commentar = () => {
+const Komentar = () => {
     const [comments, setComments] = useState([]);
     const [pinnedComment, setPinnedComment] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -310,7 +310,7 @@ const Commentar = () => {
         
         const fileExt = imageFile.name.split('.').pop();
         const fileName = `${Date.now()}_${Math.random().toString(36).substring(2)}.${fileExt}`;
-        const filePath = `profile-images/${fileName}`;
+        const filePath = fileName;
 
         const { error: uploadError } = await supabase.storage
             .from('profile-images')
@@ -456,4 +456,4 @@ const Commentar = () => {
     );
 };
 
-export default Commentar;
+export default Komentar;
