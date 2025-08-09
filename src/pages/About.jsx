@@ -21,7 +21,7 @@ const Header = memo(() => (
       data-aos-duration="800"
     >
       <Sparkles className="w-5 h-5 text-purple-400" />
-      I code with passion and purpose, guided by faith — ‘Whatever you do, work at it with all your heart, as working for the Lord.’ (Colossians 3:23)
+      I’m always learning and growing, working to create practical and well-structured applications that solve real problems and improve user experiences.
       <Sparkles className="w-5 h-5 text-purple-400" />
     </p>
   </div>
